@@ -8,8 +8,10 @@ they do in index.html */
 :root {
     --header-padding: 17px 14px;
     --button-padding: 6px 12px;
+    --section-padding: 10px 0px; 
     --header-footer-container-width: 920px;
     --header-color: #B4D0E7;
+    --main-height-line: 20px;
 }
 
 /* Tag level selectors */
@@ -27,9 +29,9 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 60px;
     padding-top: 70px;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
 }
 
 /* Property classes, apply to many elements */
@@ -40,6 +42,10 @@ h1 {
 
 .centered {
     margin: auto;
+}
+
+.main-line-height {
+    line-height: var(--main-height-line);
 }
 
 /* Element classes, specific to element types */
@@ -69,7 +75,8 @@ h1 {
 }
 
 #jumbo-img {
-    height: 360px;
+    height: 350px;
+    margin-bottom: -50px;
 }
 
 /* Advanced selectors */
@@ -90,4 +97,24 @@ header > section {
 
 /* Nav done. Had my fair share of problems
 crafting the button. Used container + padding
-to contaier + "button" class */
+to contaier and "button" class */
+
+header > section > div > div > div > div:first-child {
+    padding-bottom: 10px;
+}
+
+header > section > div > div > div > div:nth-last-child(2), 
+header > section .button-container {
+    padding: var(--section-padding);
+}
+
+header > section > div > div > div {
+    position: relative;
+}
+
+header i {
+    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+}
