@@ -1,6 +1,14 @@
+/* Stylesheet. Aside from categorization, 
+selectors appear in the same order as
+they do in index.html */
+
+
+/* Css variables */
+
 :root {
     --header-padding: 20px 14px;
     --button-padding: 6px 12px;
+    --header-footer-container-width: 920px;
 }
 
 /* Tag level selectors */
@@ -17,7 +25,7 @@ body {
     font-weight: normal;
 }
 
-/* General classes, apply to all page */
+/* Property classes, apply to many elements */
 
 .flexbox {
     display: flex;
@@ -33,12 +41,26 @@ body {
     background-color: #1B61FF;
 }
 
-header > nav {
-    justify-content: space-between;
-}
+/* Element classes, specific to element types */
 
 .nav-container {
     align-items: center;
+}
+
+.header-footer-container {
+    max-width: var(--header-footer-container-width);
+}
+
+/* Id's */
+
+#logo {
+    height: 20px;
+}
+
+/* Advanced selectors */
+
+header > nav {
+    justify-content: space-between;
 }
 
 .nav-container > a, .nav-container > div {
@@ -47,10 +69,6 @@ header > nav {
     color: #000000;
 }
 
-#logo {
-    height: 20px;
-}
-
-/* Header done. Had my fair share of problems
+/* Nav done. Had my fair share of problems
 crafting the button. Used container + padding
 to contaier + "button" class */
