@@ -6,9 +6,10 @@ they do in index.html */
 /* Css variables */
 
 :root {
-    --header-padding: 20px 14px;
+    --header-padding: 17px 14px;
     --button-padding: 6px 12px;
     --header-footer-container-width: 920px;
+    --header-color: #B4D0E7;
 }
 
 /* Tag level selectors */
@@ -25,10 +26,26 @@ body {
     font-weight: normal;
 }
 
+h1 {
+    font-size: 64px;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
 /* Property classes, apply to many elements */
 
 .flexbox {
     display: flex;
+}
+
+.centered {
+    margin: auto;
+}
+
+/* Element classes, specific to element types */
+
+.nav-container {
+    align-items: center;
 }
 
 .button {
@@ -41,12 +58,6 @@ body {
     background-color: #1B61FF;
 }
 
-/* Element classes, specific to element types */
-
-.nav-container {
-    align-items: center;
-}
-
 .header-footer-container {
     max-width: var(--header-footer-container-width);
 }
@@ -55,6 +66,10 @@ body {
 
 #logo {
     height: 20px;
+}
+
+#jumbo-img {
+    height: 360px;
 }
 
 /* Advanced selectors */
@@ -67,6 +82,10 @@ header > nav {
     padding: var(--header-padding);
     text-decoration: none;
     color: #000000;
+}
+
+header > section {
+    background-color: var(--header-color);
 }
 
 /* Nav done. Had my fair share of problems
