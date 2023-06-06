@@ -1,3 +1,10 @@
+:root {
+    --header-padding: 20px 14px;
+    --button-padding: 6px 12px;
+}
+
+/* Tag level selectors */
+
 * {
     padding: 0;
     margin: 0;
@@ -6,4 +13,44 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
 }
+
+/* General classes, apply to all page */
+
+.flexbox {
+    display: flex;
+}
+
+.button {
+    border-style: none;
+    padding: var(--button-padding);
+}
+
+.button-blue {
+    color: #FFFFFF;
+    background-color: #1B61FF;
+}
+
+header > nav {
+    justify-content: space-between;
+}
+
+.nav-container {
+    align-items: center;
+}
+
+.nav-container > a, .nav-container > div {
+    padding: var(--header-padding);
+    text-decoration: none;
+    color: #000000;
+}
+
+#logo {
+    height: 20px;
+}
+
+/* Header done. Had my fair share of problems
+crafting the button. Used container + padding
+to contaier + "button" class */
