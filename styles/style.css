@@ -132,6 +132,10 @@ h3 {
     color: var(--button-blue-color)
 }
 
+.section3-card {
+    width: calc((100% - 80px) / 3);
+}
+
 /* Id's */
 
 #logo {
@@ -144,7 +148,6 @@ h3 {
 }
 
 #section2-img {
-    /* width: 100%; */
     height: 400px;
 }
 
@@ -231,8 +234,7 @@ checkbox mechanism */
 /* Cards in first section */
 
 main > section:first-child > 
-.section-container:first-of-type > 
-div:nth-child(2) {
+.section-container > div:nth-child(2) {
     padding: var(--section-inner-padding);
     flex-basis: 0;
     gap: 40px;
@@ -283,10 +285,6 @@ div:nth-child(2) {
 
 /* Second section in main */
 
-/* section:nth-child(2) > .section-container {
-    flex-basis: 0;
-} */
-
 section:nth-child(2) > .section-container >
 div:first-child {
     flex-grow: 4;
@@ -302,6 +300,18 @@ div:last-child {
 section:nth-child(2) > .section-container >
 div:last-child .button-container {
     padding: var(--section-inner-padding);
+}
+
+/* Third section in main */
+
+main > section:nth-child(3) > 
+.section-container > div {
+    padding: var(--section-inner-padding);
+    gap: 40px;
+}
+
+.section3-card img {
+    width: 100%;
 }
 
 
