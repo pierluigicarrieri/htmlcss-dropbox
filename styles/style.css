@@ -314,6 +314,18 @@ main > section:nth-child(3) >
     width: 100%;
 }
 
+/* Fourth section in main */
+
+main > section:nth-child(4) > 
+.section-container > div:first-child {
+    width: 60%;
+}
+
+main > section:nth-child(4) > 
+.section-container > div:last-child {
+    width: 40%;
+}
+
 
 
 
