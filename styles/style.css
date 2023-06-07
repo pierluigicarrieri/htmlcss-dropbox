@@ -9,6 +9,7 @@ they do in index.html */
     --header-padding: 17px 14px;
     --button-padding: 6px 12px;
     --section-outer-padding: 70px 0px;
+    --section-inner-padding: 25px 0px;
     --section-element-padding: 10px 0px; 
     --header-footer-container-width: 920px;
     --main-section-container-width: 760px;
@@ -29,20 +30,26 @@ they do in index.html */
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
-    font-weight: normal;
+    font-weight: 100;
 }
 
 h1 {
-    font-size: 60px;
     padding-top: 70px;
     padding-bottom: 45px;
+    font-size: 60px;
 }
 
 h2 {
     width: 100%;
-    font-size: 30px;
     padding-top: 40px;
     padding-bottom: 30px;
+    font-size: 30px;
+}
+
+h3 {
+    padding: var(--section-element-padding);
+    padding-top: 15px;
+    font-size: 20px;
 }
 
 /* Utility classes, apply to many elements */
@@ -92,10 +99,31 @@ h2 {
     padding-right: 30px;
 }
 
-.section1-column {
-    width: calc(100% / 3);
-    height: 500px;
+.section1-card {
+    width: 25%;
     border: 1px solid #CFCFD1;
+    flex-grow: 1;
+}
+
+.card-header {
+    border-bottom: 1px solid #CFCFD1;
+    padding: var(--section-element-padding);
+    text-align: center;
+    
+}
+
+.card {
+    padding: 0px 20px;
+}
+
+.card-hr {
+    width: 30%;
+    margin-top: 15px;
+    border-top: 1px solid #CFCFD1;
+}
+
+.fa-check {
+    color: var(--button-color)
 }
 
 /* Id's */
@@ -133,7 +161,7 @@ header > section {
     background-color: var(--header-color);
 }
 
-header > section > div > div > div > div:first-child {
+header > section p {
     padding-bottom: 10px;
 }
 
@@ -189,7 +217,64 @@ checkbox mechanism */
     display: block;
 }
 
-main 
+main > section:first-child > 
+.section-container:first-of-type > 
+div:nth-child(2) {
+    padding: var(--section-inner-padding);
+    flex-basis: 0;
+    gap: 40px;
+}
+
+/* Cards in first section */
+
+.card > div, .card > h4 {
+    padding: var(--section-element-padding);
+}
+
+.card > div:nth-child(3), .card > div:nth-child(6),
+.card > .card-hr {
+    margin-bottom: 15px;
+}
+
+.card .button {
+    text-align: center;
+}
+
+.card > div:nth-child(4), .card > div:nth-child(5), 
+.card > div:nth-child(6) {
+    display: flex;
+}
+
+.fa-user, .fa-folder, .fa-share-nodes {
+    padding-right: 5px;
+}
+
+
+/* Horizontal part in first section */
+
+.section1-card:last-child {
+    width: 100%;
+}
+
+.section1-card:last-child .card {
+    flex-basis: 0;
+}
+
+.section1-card:last-child .card 
+> div:first-child {
+    flex-grow: 3;
+}
+
+.section1-card:last-child .card 
+> div:last-child {
+    flex-grow: 1;
+}
+
+.section1-card:last-child p, 
+.section1-card:last-child h3, 
+.section1-card:last-child h4 {
+    padding: var(--section-element-padding);
+}
 
 
 
