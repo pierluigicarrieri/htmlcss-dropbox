@@ -10,6 +10,8 @@ they do in index.html */
     --button-padding: 6px 12px;
     --section-outer-padding: 60px 0px;
     --section-inner-padding: 25px 0px;
+    --section-side-padding1: 0px 20px;
+    --section-side-padding2: 0px 30px;
     --section-element-padding: 10px 0px; 
     --header-footer-container-width: 920px;
     --main-section-container-width: 760px;
@@ -119,10 +121,10 @@ h3 {
 }
 
 .card {
-    padding: 0px 20px;
+    padding: var(--section-side-padding1);
 }
 
-.card-hr {
+.card-hr, .square-hr {
     width: 30%;
     margin-top: 15px;
     border-top: 1px solid #CFCFD1;
@@ -149,6 +151,10 @@ h3 {
 
 #section2-img {
     height: 400px;
+}
+
+#uni-florida-pic {
+    object-fit: contain;
 }
 
 /* Advanced selectors */
@@ -197,7 +203,7 @@ header i {
 
 /* Main */
 
-main >section {
+main > section {
     padding: var(--section-outer-padding);
 }
 
@@ -326,6 +332,88 @@ main > section:nth-child(4) >
     width: 40%;
 }
 
+/* Fifth section in main */
+
+main > section:nth-child(5) > div {
+    width: calc(100% /3);
+    aspect-ratio: 1 / 1;
+}
+
+main > section:nth-child(5) > div:first-child > div,
+main > section:nth-child(5) > div:last-child > div {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+}
+
+/* Right side square colors */
+
+main > section:nth-child(5) > div:first-child > 
+div:first-child {
+    border: 12px solid #D1E9CD;
+    background-color: #A2D39B;
+}
+
+main > section:nth-child(5) > div:first-child > 
+div:nth-child(2) {
+    background-color: #61072B;
+}
+
+main > section:nth-child(5) > div:first-child > 
+div:nth-child(3) {
+    background-color: #3A93CE;
+}
+
+main > section:nth-child(5) > div:first-child > 
+div:last-child {
+    background-color: #ED1E1D;
+}
+
+/* Left side square colors */
+
+main > section:nth-child(5) > div:last-child > 
+div:first-child {
+    background-color: #ED1E1D;
+}
+
+main > section:nth-child(5) > div:last-child > 
+div:nth-child(2) {
+    background-color: var(--header-color);
+}
+
+main > section:nth-child(5) > div:last-child > 
+div:nth-child(3) {
+    background-color: #0D2481;
+}
+
+main > section:nth-child(5) > div:last-child > 
+div:last-child {
+    background-color: #FAD830;
+}
 
 
 
+
+
+
+
+main > section:nth-child(5) > div:first-child img,
+main > section:nth-child(5) > div:last-child img {
+    width: 50%;
+}
+
+main > section:nth-child(5) > div:nth-child(2) {
+    padding: var(--section-side-padding2);
+    background-color: #F5F5F5;
+}
+
+main > section:nth-child(5) > div:nth-child(2) img,
+main > section:nth-child(5) > div:nth-child(2) div,
+main > section:nth-child(5) > div:nth-child(2) p {
+    padding: var(--section-element-padding);
+}
+
+main > section:nth-child(5) > div:nth-child(2) img {
+    width: 50%;
+    padding-top: 40PX;
+}
