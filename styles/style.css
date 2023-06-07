@@ -34,7 +34,7 @@ h1 {
     padding-bottom: 45px;
 }
 
-/* Property classes, apply to many elements */
+/* Utility classes, apply to many elements */
 
 .flexbox {
     display: flex;
