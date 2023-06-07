@@ -327,12 +327,20 @@ main > section:nth-child(4) >
     width: 60%;
 }
 
+main > section:nth-child(4) h2 {
+    line-height: 45px;
+}
+
 main > section:nth-child(4) > 
 .section-container > div:last-child {
     width: 40%;
 }
 
 /* Fifth section in main */
+
+main > section:nth-child(5) {
+    padding-bottom: 0;
+}
 
 main > section:nth-child(5) > div {
     width: calc(100% /3);
@@ -391,12 +399,6 @@ div:last-child {
     background-color: #FAD830;
 }
 
-
-
-
-
-
-
 main > section:nth-child(5) > div:first-child img,
 main > section:nth-child(5) > div:last-child img {
     width: 50%;
@@ -417,3 +419,32 @@ main > section:nth-child(5) > div:nth-child(2) img {
     width: 50%;
     padding-top: 40PX;
 }
+
+/* Sixth section in main */
+
+main > section:nth-child(6) {
+    background-color: var(--header-color);
+}
+
+main > section:nth-child(6) > 
+.section-container > div:first-child {
+    width: 60%;
+}
+
+main > section:nth-child(6) h2 {
+    line-height: 45px;
+    color: #620000;
+}
+
+main > section:nth-child(6) > 
+.section-container > div:last-child {
+    width: 40%;
+    padding: 50px;
+}
+
+main > section:nth-child(6) .button {
+    text-align: center;
+}
+
+/* Seventh section in main */
+
