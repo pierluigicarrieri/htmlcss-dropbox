@@ -8,10 +8,14 @@ they do in index.html */
 :root {
     --header-padding: 17px 14px;
     --button-padding: 6px 12px;
-    --section-padding: 10px 0px; 
+    --section-outer-padding: 70px 0px;
+    --section-element-padding: 10px 0px; 
     --header-footer-container-width: 920px;
-    --header-color: #B4D0E7;
+    --main-section-container-width: 760px;
     --main-height-line: 20px;
+    --header-color: #B4D0E7;
+    --button-color: #1B61FF;
+    
 }
 
 /* Tag level selectors */
@@ -34,10 +38,21 @@ h1 {
     padding-bottom: 45px;
 }
 
+h2 {
+    width: 100%;
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
 /* Utility classes, apply to many elements */
 
 .flexbox {
     display: flex;
+}
+
+.wrapped {
+    flex-wrap: wrap;
 }
 
 .centered {
@@ -61,11 +76,26 @@ h1 {
 
 .button-blue {
     color: #FFFFFF;
-    background-color: #1B61FF;
+    background-color: var(--button-color)
 }
 
 .header-footer-container {
     max-width: var(--header-footer-container-width);
+}
+
+.section-container {
+    max-width: var(--main-section-container-width);
+}
+
+.checkbox-container {
+    padding: var(--section-element-padding);
+    padding-right: 30px;
+}
+
+.section1-column {
+    width: calc(100% / 3);
+    height: 500px;
+    border: 1px solid #CFCFD1;
 }
 
 /* Id's */
@@ -81,6 +111,8 @@ h1 {
 
 /* Advanced selectors */
 
+/* Header navbar */
+
 header > nav {
     justify-content: space-between;
 }
@@ -91,13 +123,15 @@ header > nav {
     color: #000000;
 }
 
-header > section {
-    background-color: var(--header-color);
-}
-
 /* Nav done. Had my fair share of problems
 crafting the button. Used container + padding
 to contaier and "button" class */
+
+/* Header Jumbo */
+
+header > section {
+    background-color: var(--header-color);
+}
 
 header > section > div > div > div > div:first-child {
     padding-bottom: 10px;
@@ -105,7 +139,7 @@ header > section > div > div > div > div:first-child {
 
 header > section > div > div > div > div:nth-last-child(2), 
 header > section .button-container {
-    padding: var(--section-padding);
+    padding: var(--section-element-padding);
 }
 
 header > section > div > div > div {
@@ -118,3 +152,45 @@ header i {
     bottom: 15px;
     left: 0;
 }
+
+/* Main */
+
+main >section {
+    padding: var(--section-outer-padding);
+}
+
+/* First section in main */
+
+/* Next 4 selectors virtualize the 
+checkbox mechanism */
+
+.checkbox-container > div:first-child {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    border: 1px solid #CFCFD1;
+    border-radius: 50%;
+}
+
+.checkbox-container > div > div {
+    width: 8px;
+    height: 8px;
+    margin: 3px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: none;
+}
+
+.checkbox-container > div:first-child:active {
+    background-color: var(--button-color);
+}
+
+.checkbox-container > div:first-child:active > div {
+    display: block;
+}
+
+main 
+
+
+
+
