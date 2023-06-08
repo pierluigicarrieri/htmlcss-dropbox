@@ -19,7 +19,6 @@ they do in index.html */
     --header-color: #B4D0E7;
     --button-blue-color: #1B61FF;
     --button-white-color: #FFFFFF;
-    
 }
 
 /* Tag level selectors */
@@ -53,6 +52,11 @@ h3 {
     padding: var(--section-element-padding);
     padding-top: 15px;
     font-size: 20px;
+}
+
+footer {
+    padding-top: 60px;
+    background-color: #000000;
 }
 
 /* Utility classes, apply to many elements */
@@ -124,7 +128,7 @@ h3 {
     padding: var(--section-side-padding1);
 }
 
-.card-hr, .square-hr {
+.card-hr, .square-hr, .footer-hr {
     width: 30%;
     margin-top: 15px;
     border-top: 1px solid #CFCFD1;
@@ -229,11 +233,11 @@ checkbox mechanism */
     display: none;
 }
 
-.checkbox-container > div:first-child:active {
+.checkbox-container > div:first-child:focus {
     background-color: var(--button-blue-color);
 }
 
-.checkbox-container > div:first-child:active > div {
+.checkbox-container > div:first-child:focus > div {
     display: block;
 }
 
@@ -448,6 +452,10 @@ main > section:nth-child(6) .button {
 
 /* Seventh section in main */
 
+main > section:nth-child(7) .section-container {
+    padding-bottom: 40px;
+}
+
 main > section:nth-child(7) .section-container > div {
     padding: var(--section-inner-padding);
     border-top: 1px solid #CFCFD1;
@@ -461,3 +469,39 @@ main > section:nth-child(7) .section-container > div > i {
 }
 
 /* Footer */
+
+footer .header-footer-container {
+    gap: 40px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    padding: var(--section-element-padding);
+}
+
+footer a, footer h3 {
+    color: var(--button-white-color);
+    text-decoration: none;
+}
+
+/* Footer columns */
+
+footer > .header-footer-container > div {
+    width: calc((100% - 160px) / 5);
+}
+
+/* Footer row */
+
+footer > .header-footer-container > div:last-child {
+    padding: var(--section-outer-padding);
+    color: #999999;
+    align-items: center;
+}
+
+footer > .header-footer-container > div:last-child i,
+footer > .header-footer-container > div:last-child div {
+    padding-right: 5px;
+}
