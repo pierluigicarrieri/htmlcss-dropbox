@@ -213,10 +213,9 @@ main > section {
 
 /* First section in main */
 
-/* Next 4 selectors virtualize the 
-checkbox mechanism */
+/* Radio button mechanism */
 
-.checkbox-container > div:first-child {
+.checkbox-container input {
     width: 16px;
     height: 16px;
     margin-right: 5px;
@@ -224,21 +223,8 @@ checkbox mechanism */
     border-radius: 50%;
 }
 
-.checkbox-container > div > div {
-    width: 8px;
-    height: 8px;
-    margin: 3px;
-    border-radius: 50%;
-    background-color: var(--button-white-color);
-    display: none;
-}
-
-.checkbox-container > div:first-child:focus {
+.checkbox-container > input:focus {
     background-color: var(--button-blue-color);
-}
-
-.checkbox-container > div:first-child:focus > div {
-    display: block;
 }
 
 /* Cards in first section */
