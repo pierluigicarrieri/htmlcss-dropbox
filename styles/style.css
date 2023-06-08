@@ -448,3 +448,16 @@ main > section:nth-child(6) .button {
 
 /* Seventh section in main */
 
+main > section:nth-child(7) .section-container > div {
+    padding: var(--section-inner-padding);
+    border-top: 1px solid #CFCFD1;
+    border-bottom: 1px solid #CFCFD1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main > section:nth-child(7) .section-container > div > i {
+    padding-right: 25px;
+}
+
+/* Footer */
