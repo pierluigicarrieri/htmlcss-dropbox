@@ -77,25 +77,25 @@ footer {
     line-height: var(--main-height-line);
 }
 
-/* Element classes, specific to element types */
-
-.nav-container {
-    align-items: center;
-}
-
 .button {
     border-style: none;
     padding: var(--button-padding);
 }
 
 .button-blue {
-    color: #FFFFFF;
+    color: var(--button-white-color);
     background-color: var(--button-blue-color)
 }
 
 .button-white {
     border: 1px solid black;
     background-color: var(--button-white-color);
+}
+
+/* Classes */
+
+.nav-container {
+    align-items: center;
 }
 
 .header-footer-container {
@@ -161,7 +161,7 @@ footer {
     object-fit: contain;
 }
 
-/* Advanced selectors */
+/* Pseudo-selectors */
 
 /* Header navbar */
 
@@ -174,10 +174,6 @@ header > nav {
     text-decoration: none;
     color: #000000;
 }
-
-/* Nav done. Had my fair share of problems
-crafting the button. Used container + padding
-to contaier and "button" class */
 
 /* Header Jumbo */
 
