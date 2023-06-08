@@ -5,8 +5,7 @@ they do in index.html */
 
 /* Css variables */
 
-:root {
-    --header-padding: 17px 14px;
+:root { 
     --button-padding: 6px 12px;
     --section-outer-padding: 60px 0px;
     --section-inner-padding: 25px 0px;
@@ -170,7 +169,7 @@ header > nav {
 }
 
 .nav-container > a, .nav-container > div {
-    padding: var(--header-padding);
+    padding: 17px 14px;
     text-decoration: none;
     color: #000000;
 }
